@@ -318,7 +318,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
     class PageChangeModal(discord.ui.Modal, title="Go to page"):
         """Modal that prompts users for the page number to change to"""
 
-        page_number: discord.ui.TextInput[discord.ui.Modal] = discord.ui.TextInput(label="Page number", style=discord.TextStyle.short)
+        page_number: discord.ui.InputText[discord.ui.Modal] = discord.ui.InputText(label="Page number", style=discord.TextStyle.short)
 
         def __init__(self, interface: 'PaginatorInterface', *args: typing.Any, **kwargs: typing.Any):
             super().__init__(*args, timeout=interface.timeout_length, **kwargs)
